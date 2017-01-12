@@ -1,6 +1,6 @@
 import Hammer from 'hammerjs'
 
-export default class Manager {
+export default class Slideer {
     
     constructor(el, opt = {}) {
 

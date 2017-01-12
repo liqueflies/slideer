@@ -10,12 +10,13 @@ const isProd = process.argv.indexOf('-p') !== -1;
 module.exports = {
 
   entry: {
-    manager: './src/index.js'
+    slideer: './src/index.js'
   },
 
   output: {
     path: path.join(__dirname, '/build'),
     filename: isProd ? '[name].min.js' : '[name].js',
+    libraryTarget: 'umd'
   },
 
   devtool: 'source-map',
@@ -28,7 +29,9 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-          plugins: ['transform-es2015-template-literals']
+          plugins: [
+            'transform-es2015-template-literals'
+          ]
         }
       },
     ]

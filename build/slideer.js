@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -60,11 +70,11 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var Manager = function () {
-	    function Manager(el) {
+	var Slideer = function () {
+	    function Slideer(el) {
 	        var opt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	
-	        _classCallCheck(this, Manager);
+	        _classCallCheck(this, Slideer);
 	
 	        if (!el) console.error('You need to provide an element in costructor');
 	
@@ -86,7 +96,7 @@
 	        this.onSwipe = this.onSwipe.bind(this);
 	    }
 	
-	    _createClass(Manager, [{
+	    _createClass(Slideer, [{
 	        key: 'init',
 	        value: function init() {
 	
@@ -167,10 +177,10 @@
 	        }
 	    }]);
 	
-	    return Manager;
+	    return Slideer;
 	}();
 	
-	exports.default = Manager;
+	exports.default = Slideer;
 
 /***/ },
 /* 1 */
@@ -2822,5 +2832,7 @@
 
 
 /***/ }
-/******/ ]);
-//# sourceMappingURL=manager.js.map
+/******/ ])
+});
+;
+//# sourceMappingURL=slideer.js.map
