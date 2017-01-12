@@ -30,10 +30,10 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/liqueflies/slider-manager.git"
+    "url": "git://github.com/liqueflies/slideer.git"
   },
-  "homepage": "https://github.com/liqueflies/slider-manager",
+  "homepage": "https://github.com/liqueflies/slideer",
   "bugs": {
-    "url": "https://github.com/liqueflies/slider-manager/issues"
+    "url": "https://github.com/liqueflies/slideer/issues"
   }
 }

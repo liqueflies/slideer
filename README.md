@@ -111,4 +111,4 @@ Tests will be available soon.
 
 ## License
 
-MIT, see [LICENSE.md](http://github.com/liqueflies/slider-manager/blob/master/LICENSE.md) for details.
+MIT, see [LICENSE.md](http://github.com/liqueflies/slideer/blob/master/LICENSE.md) for details.
