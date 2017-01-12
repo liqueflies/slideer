@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="slideer.png" width="250px" />
+</p>
+
 # Slideer
 
 Simple wrapper to create sliders focused on animations.
