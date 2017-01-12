@@ -7,7 +7,7 @@ This project is a fork of `slider-manager` originally created by [Baptiste Briel
 
 Prerequisites: [Node.js](https://nodejs.org/en/) (>=4.x, 6.x preferred) and [Git](https://git-scm.com/).
 
-## Warning: packages will be soon loaded to npm registry, instead use
+:warning: **Warning: packages will be soon loaded to npm registry, instead use** :warning:
 
 ```
 yarn add git://github.com/liqueflies/slideer.git#master
