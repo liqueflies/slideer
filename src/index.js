@@ -1,5 +1,3 @@
-import 'babel-polyfill';
-
 import Hammer from 'hammerjs'
 
 export default class Manager {
