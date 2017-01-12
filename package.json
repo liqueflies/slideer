@@ -4,11 +4,7 @@
   "description": "Slider manager focused on animation, forked by slider-manager by Baptiste Briel",
   "main": "build/slideer.js",
   "license": "MIT",
-  "author": {
-    "name": "Lorenzo Girardi",
-    "email": "lorenzo.girardi93@gmail.com",
-    "url": "https://github.com/liqueflies"
-  },
+  "author": "Lorenzo Girardi <lorenzo.girardi93@gmail.com> (https://github.com/liqueflies)",
   "dependencies": {
     "hammerjs": "^2.0.6"
   },
