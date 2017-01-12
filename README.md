@@ -32,13 +32,13 @@ npm install slideer --save`
 ## Usage
 
 ```javascript
-import Manager from 'slider-manager'
+import Slideer from 'slideer'
 import gsap from 'gsap'
 
 const slideWrap = document.getElementById('#slider')
 const slides = Array.from(slideWrap.querySelectorAll('.slides'))
 
-const slider = new Manager(slideWrap, {
+const slider = new Slideer(slideWrap, {
     length: slides.length,
     loop: true,
     callback: (event) => {
