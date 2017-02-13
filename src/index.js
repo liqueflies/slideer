@@ -83,6 +83,7 @@ export default class Slideer {
         const check = this.checkLoop(index)
         const event = this.getEvent(check)
 
+        if(this.animating) return
         this.animating = true
 
         this.index = check
