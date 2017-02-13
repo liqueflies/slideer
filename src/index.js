@@ -5,7 +5,7 @@ export default class Slideer {
     constructor(el, opt = {}) {
 
         if(!el)
-            console.error('You need to provide an element in costructor')    
+            console.error('You need to provide an element in costructor')
 
         if(!opt.callback)
             console.error('You need to provide a callback function in the options')
@@ -29,7 +29,9 @@ export default class Slideer {
     init() {
 
         this.hammer = new Hammer.Manager(this.el)
-        this.hammer.add(new Hammer.Swipe())
+        this.hammer.add(new Hammer.Swipe({
+            direction: Hammer.DIRECTION_HORIZONTAL
+        }))
         this.hammer.on('swipe', this.onSwipe)
     }
     
