@@ -101,7 +101,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function init() {
 	
 	            this.hammer = new _hammerjs2.default.Manager(this.el);
-	            this.hammer.add(new _hammerjs2.default.Swipe());
+	            this.hammer.add(new _hammerjs2.default.Swipe({
+	                direction: _hammerjs2.default.DIRECTION_HORIZONTAL
+	            }));
 	            this.hammer.on('swipe', this.onSwipe);
 	        }
 	    }, {
