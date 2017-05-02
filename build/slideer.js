@@ -83,7 +83,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.el = el;
 	        this.animating = false;
 	
-	        this.index = 0;
+	        this.index = opt.startIndex ? opt.startIndex : 0;
 	        this.length = opt.length - 1;
 	
 	        this.options = {
@@ -162,6 +162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var check = this.checkLoop(index);
 	            var event = this.getEvent(check);
 	
+	            if (this.animating) return;
 	            this.animating = true;
 	
 	            this.index = check;

@@ -13,7 +13,7 @@ export default class Slideer {
         this.el = el
         this.animating = false
         
-        this.index = 0
+        this.index = opt.startIndex ? opt.startIndex : 0
         this.length = opt.length - 1
 
         this.options = {
