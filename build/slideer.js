@@ -88,7 +88,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        this.options = {
 	            loop: opt.loop || false,
-	            callback: opt.callback
+	            callback: opt.callback,
+	            delta: opt.delta || 1
 	        };
 	
 	        this.hammer = null;

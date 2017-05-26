@@ -1,6 +1,6 @@
 {
   "name": "slideer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Slider manager focused on animation, forked by slider-manager by Baptiste Briel",
   "main": "build/slideer.js",
   "license": "MIT",
