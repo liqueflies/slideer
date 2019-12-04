@@ -1,7 +1,10 @@
 # ChangeLog
 
+## 0.0.6
+- Limited touchActions to pan-y
+
 ## 0.0.5
-- Fixed swipe direction and limited to y
+- Fixed swipe direction
 
 ## 0.0.4
 - Fixed startIndex
