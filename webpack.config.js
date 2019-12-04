@@ -13,6 +13,8 @@ module.exports = {
     slideer: './src/index.js'
   },
 
+  mode: isProd ? 'production' : 'development',
+
   output: {
     path: path.join(__dirname, '/build'),
     filename: isProd ? '[name].min.js' : '[name].js',
@@ -22,17 +24,18 @@ module.exports = {
   devtool: 'source-map',
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015'],
-          plugins: [
-            'transform-es2015-template-literals'
-          ]
-        }
+        use: [
+          {
+            loader: 'babel-loader', 
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        ]
       },
     ]
   },

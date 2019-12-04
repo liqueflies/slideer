@@ -1,5 +1,11 @@
 # ChangeLog
 
+## 0.0.5
+- Fixed swipe direction and limited to y
+
+## 0.0.4
+- Fixed startIndex
+
 ## 0.0.3
 - Fixed wrong build
 
