@@ -1,7 +1,7 @@
 import Hammer from 'hammerjs'
 
 export default class Slideer {
-    
+
     constructor(el, opt = {}) {
 
         if(!el)
@@ -9,10 +9,10 @@ export default class Slideer {
 
         if(!opt.callback)
             console.error('You need to provide a callback function in the options')
-        
+
         this.el = el
         this.animating = false
-        
+
         this.index = opt.startIndex ? opt.startIndex : 0
         this.length = opt.length - 1
 
@@ -26,27 +26,27 @@ export default class Slideer {
 
         this.onSwipe = this.onSwipe.bind(this)
     }
-    
+
     init() {
 
-        this.hammer = new Hammer.Manager(this.el)
+        this.hammer = new Hammer.Manager(this.el, { touchAction: 'pan-y' })
         this.hammer.add(new Hammer.Swipe({
             direction: Hammer.DIRECTION_HORIZONTAL
         }))
         this.hammer.on('swipe', this.onSwipe)
     }
-    
+
     destroy() {
-    
+
         this.hammer.off('swipe', this.onSwipe)
         this.hammer.destroy()
         this.hammer = null
     }
 
     getNext(delta) {
-        
-        const next = delta >= this.options.delta ? this.index - 1 : this.index + 1 
-        
+
+        const next = delta >= this.options.delta ? this.index - 1 : this.index + 1
+
         return this.checkLoop(next)
     }
 
@@ -63,9 +63,9 @@ export default class Slideer {
             direction: index >= this.index ? 1 : -1
         }
     }
-    
+
     getCurrentSlide() {
-        
+
         return this.index
     }
 
@@ -75,10 +75,10 @@ export default class Slideer {
 
         if(this.animating || delta > -this.options.delta && delta < this.options.delta) return
         this.animating = true
-        
+
         this.callback(delta)
     }
-    
+
     goTo(index) {
 
         const check = this.checkLoop(index)
@@ -92,10 +92,10 @@ export default class Slideer {
     }
 
     callback(delta) {
-        
+
         const index = this.getNext(delta)
         const event = this.getEvent(index)
-        
+
         this.index = index
         this.options.callback(event)
     }

@@ -88,7 +88,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        this.options = {
 	            loop: opt.loop || false,
-	            callback: opt.callback
+	            callback: opt.callback,
+	            delta: opt.delta || 1
 	        };
 	
 	        this.hammer = null;
@@ -100,7 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: 'init',
 	        value: function init() {
 	
-	            this.hammer = new _hammerjs2.default.Manager(this.el);
+	            this.hammer = new _hammerjs2.default.Manager(this.el, { touchAction: 'pan-y' });
 	            this.hammer.add(new _hammerjs2.default.Swipe({
 	                direction: _hammerjs2.default.DIRECTION_HORIZONTAL
 	            }));
